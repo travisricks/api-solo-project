@@ -1,6 +1,7 @@
 {
-  "name": "api-tut",
+  "name": "api-solo-project",
   "version": "1.0.0",
+  "description": "CC API Solo Project - Olympic Medalists",
   "main": "index.js",
   "scripts": {
     "test": "node tests/initialize.js && mocha tests/test.js && yarn lint",

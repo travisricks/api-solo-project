@@ -67,7 +67,7 @@ This `GET` method shows all winners.
 #### See all winners from a certain country
 
 `api/winners/countryCode`
-This `GET` method shows all winners.
+This `GET` method shows all winners from a specific country.
 
 #### Add new winner
 

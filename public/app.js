@@ -10,7 +10,6 @@ AddWinner.addEventListener("submit", e => {
   const gender = AddWinner.querySelector(".gender").value;
   const event = AddWinner.querySelector(".event").value;
   const medal = AddWinner.querySelector(".medal").value;
-  //   const password = AddWinner.querySelector('.password').value
   post("/addWinner", {
     city,
     edition,

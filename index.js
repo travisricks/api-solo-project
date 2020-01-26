@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const knex = require("knex")(require("./knexfile"));
 const store = require("./store");
 const app = express();
 const Winner = require("./models/Winner");
@@ -15,8 +14,6 @@ app.get("/api/winners", (req, res) => {
 app.get("/api/winners/:a", (req, res) => {
   Winner.query().then(winners => {
     const results = res.json(winners);
-    // console.log(results);
-    // const filtered = results.filter(value => value.noc === req.params.a);
     return results;
   });
 });
