@@ -1,0 +1,39 @@
+// module.exports = {
+//     // database connection configs
+//     // You might want to update this
+//     db: {
+//       client: "pg",
+//       connection: process.env.DB_URL || {
+//         host: process.env.DB_HOST || "127.0.0.1",
+//         port: process.env.DB_PORT || 5432,
+//         database: process.env.DB_NAME || "olympics",
+//         user: process.env.DB_USER || "postgres",
+//         password: process.env.DB_PASSWORD || "postgres",
+//       },
+//     },
+
+//     // port for server to run on
+//     express: {
+//       port: process.env.PORT || 3000,
+//     },
+
+//     // timestamp format for our logs
+//     logger: {
+//       format: "dddd MMMM Do YYYY, h:mm:ss a",
+//     },
+//   };
+var pg = require("pg");
+var connection = pg.createConnection({
+  host: "localhost",
+  user: "postgres",
+  password: "postgres",
+  database: "olympics"
+});
+
+try {
+  connection.connect();
+} catch (error) {
+  console.log(`Database Connection failed: ${error}`);
+}
+
+module.exports = connection;

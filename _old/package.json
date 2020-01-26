@@ -1,10 +1,9 @@
 {
-  "name": "api-solo-project",
+  "name": "sprint.database-part-2",
   "version": "1.0.0",
-  "description": "CC API Solo Project - Olympic Medalists",
+  "description": "Second day of the Code Chrysalis Databases sprint",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/index.js",
     "test": "node tests/initialize.js && mocha tests/test.js && yarn lint",
     "lint": "eslint --fix .",
     "start": "node index.js",
@@ -13,13 +12,15 @@
     "rollback": "knex migrate:rollback --knexfile models/knexfile.js ",
     "precommit": "pretty-quick --staged"
   },
-  "author": "Travis Ricks",
+  "author": "Code Chrysalis",
   "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "knex": "^0.15.2",
+    "knex-csv-seeder": "^0.4.1",
     "moment": "^2.22.2",
     "morgan": "^1.9.1",
     "pg": "^7.5.0"
@@ -32,7 +33,6 @@
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.1.2",
     "mocha": "^5.2.0",
-    "nodemon": "^2.0.2",
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1",
     "sqlite3": "^4.0.9"
