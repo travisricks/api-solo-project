@@ -1,40 +1,28 @@
 {
-  "name": "api-solo-project",
+  "name": "api-tut",
   "version": "1.0.0",
-  "description": "CC API Solo Project - Olympic Medalists",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/index.js",
     "test": "node tests/initialize.js && mocha tests/test.js && yarn lint",
     "lint": "eslint --fix .",
     "start": "node index.js",
-    "migrate": "knex migrate:latest --knexfile models/knexfile.js",
-    "seed:run": "knex seed:run --knexfile models/knexfile.js",
+    "migrate": "knex migrate:latest --knexfile knexfile.js",
+    "seed:run": "knex seed:run --knexfile knexfile.js",
     "rollback": "knex migrate:rollback --knexfile models/knexfile.js ",
     "precommit": "pretty-quick --staged"
   },
-  "author": "Travis Ricks",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "knex": "^0.15.2",
-    "moment": "^2.22.2",
-    "morgan": "^1.9.1",
-    "pg": "^7.5.0"
-  },
-  "devDependencies": {
-    "chai": "^4.0.2",
+    "body-parser": "^1.19.0",
     "eslint": "^5.7.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-problems": "^1.1.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "husky": "^1.1.2",
-    "mocha": "^5.2.0",
-    "nodemon": "^2.0.2",
-    "prettier": "^1.12.1",
-    "pretty-quick": "^1.4.1",
-    "sqlite3": "^4.0.9"
+    "express": "^4.17.1",
+    "knex": "^0.20.8",
+    "o": "^2.3.2",
+    "objection": "^2.1.2",
+    "pg": "^7.17.1",
+    "prettier": "^1.19.1"
   }
 }
