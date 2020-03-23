@@ -4,22 +4,17 @@ _This was created during my time as a student at Code Chrysalis_
 
 # Summer Olympics 2008 Winners API
 
-## Table of Contents
+This is a CRUD API using Postgres, Knex and RESTful principles. It contains the medal winners from the 2008 Summer Olympics. It is displayed with an html frontend.
 
-1.  [Introduction](#introduction)
-1.  [Environment](#environment)
-    1.  [Installing Dependencies and Startup](#installing-dependencies-and-startup)
-1.  [API Endpoints](#api-endpoints)
+![Frontend Screenshot](readme-screenshots/frontend-screenshot.png)
 
-## Introduction
+---
 
-This is a simple CRUD api using postgres, knex and and REST. It contains the medal winners from the 2008 Summer Olympics.
-
-## Environment
+## Getting Started
 
 ### Postgres
 
-You will need [postgres](https://postgresapp.com/) installed.
+You will need [Postgres](https://postgresapp.com/) installed.
 
 Create a database for this project by running:
 
@@ -45,31 +40,26 @@ To set up the database, run migrations and seeds:
     yarn seed
 ```
 
-To roll back migrations
-
-```bash
-    yarn rollback
-```
-
 To start the app:
 
 ```bash
     nodemon .
 ```
 
+---
+
+To roll back migrations:
+
+```bash
+    yarn rollback
+```
+
+---
+
 ### API endpoints
 
-#### See all winners
-
-`api/winners`
-This `GET` method shows all winners.
-
-#### See all winners from a certain country
-
-`api/winners/countryCode`
-This `GET` method shows all winners from a specific country.
-
-#### Add new winner
-
-`index.html`
-From the homepage, this `POST` form will add a winner.
+| endpoint                  | method | result                                    |
+| ------------------------- | ------ | ----------------------------------------- |
+| `api/winners`             | GET    | Shows all winners                         |
+| `api/winners/countryCode` | GET    | Shows all winners from a specific country |
+| `index.html`              | POST   | this form will add a winner               |

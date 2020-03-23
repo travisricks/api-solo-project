@@ -1,5 +1,4 @@
 exports.up = function(knex, Promise) {
-  // create the 'winners' table with three columns
   return knex.schema.createTable("winners", t => {
     t.increments("id")
       .primary()
